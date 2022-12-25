@@ -7,30 +7,30 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", "11796331"))
+API_HASH = getenv("API_HASH", "a089161b52f234bb90a6eb915551e8c0")
 
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN", "5821014539:AAE9rOryHoe_Pk2CNetcvSQHkUR5R-5O4BM")
 
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "")
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001772857132"))
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "maixira ダ ᴍᴜsɪᴄ")
 
-OWNER_ID = list(map(int, getenv("OWNER_ID", "1356469075").split()))
+OWNER_ID = list(map(int, getenv("OWNER_ID", "5518757491").split()))
 
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/AnonymousX1025/AnonXMusic")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Iro09/maixira")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/FallenAssociation")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/DevilsHeavenMF")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/iro_bot_support")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/iro_x_support")
 
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "180"))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "900"))
 SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
 
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
@@ -58,8 +58,8 @@ TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600"))
 TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
 # https://www.gbmb.org/mb-to-bytes
 
-STRING1 = getenv("STRING_SESSION", None)
-STRING2 = getenv("STRING_SESSION2", None)
+STRING1 = getenv("STRING_SESSION", "AQB5ev_nUyXiDba807mSwi10hD1b-A9P8XN1fcpD9rw9EQnHXmlO25zQ8u7mENU8l4cA0iUtZAEqPB6zKJ5gA0rINua9YcZZ9Sdn7YOhSZkrnS4ZMFSsQFbg3VbTqNdLvAg8_wV3yFrLQeGlJ62KVU4VckWlBqBK50iB46IZZLH2hIqVVoHsVMxMb8oYzP6bwOKzb8DXUwyXjOR-_yyzKyqCJ83bYpRCw053pbpbjhN9NvX-5FuTpxp2aaolKZ7OLnWx8ew-JUvuYZbBMs_KR8RkForJ7Qq2zsLwbshsojCRG-3NXMu7p56Fu_tmoT1aERaYS_x9HWtzG9bJwilTWVgBAAAAAVkkESEA")
+STRING2 = getenv("STRING_SESSION2", "AQDCF3xI4jWR-uA7c_ShgAjk-jftcVZkgXkjbNqQ7sB4nMNw6sOqoWih2qF30GUH9RKk1i-iVS6dekQHn0UBW7dIGDPXl1bYqggM5ZR42x73CijtOYKq-2ekVXzC5-U_0p81quNNSxkjpdehix-q0L0F0n2drvX53ninwHohRI9BWS2tk6HSh8HP1ZRlz5sk0hLCC8ZvE0vdU7McrzyYmT_WZ7r0tRUD_7LorrJWErWK9eeNPY3vUIWgqgYLSTVlrnnO8GZkSXwtC1eQ10KyR2G8UKDRh5ZqWSudX7FImUeHfcye-EpSh3nGJz6bZ6PJp4k-77Y1Qm4BDyFlT1MnDE-5AAAAAVLMFsEA")
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
@@ -67,7 +67,7 @@ STRING5 = getenv("STRING_SESSION5", None)
 BANNED_USERS = filters.user()
 YTDOWNLOADER = 1
 LOG = 2
-LOG_FILE_NAME = "logs.txt"
+LOG_FILE_NAME = "maixira logs.txt"
 adminlist = {}
 lyrical = {}
 chatstats = {}
@@ -76,7 +76,7 @@ clean = {}
 autoclean = []
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/56d1760224589ee370186.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/76242492a4a2d080875af.mp4")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
